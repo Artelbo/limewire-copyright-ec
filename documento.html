@@ -1,116 +1,134 @@
 <!doctype html>
-<html lang='en'>
+<html lang='it'>
 <head>
   <meta charset='UTF-8'>
-  <meta name='viewport'
-        content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
-  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-  <title>Documento</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Il Diritto d'Autore e l'Era della Condivisione: L'Impatto di LimeWire e del P2P</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-  <link rel='stylesheet' href='./style.css'>
+  <style>
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    sup { vertical-align: super; font-size: 0.75rem; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-thumb { background: #475569; border-radius: 10px; }
+  </style>
 </head>
-<body class="flex h-screen bg-gray-100">
-  <aside id="sidebar"
-         class="w-64 bg-slate-900 text-white flex flex-col transition-transform">
-    <div class="p-4 text-xl border-b border-gray-700 flex flex-row">
-      <span>Indice</span>
-<!--       <button class="ml-auto" onclick="toggleSidebar()"> -->
-<!--         <i class="bi bi-layout-text-sidebar-reverse"></i> -->
-<!--       </button> -->
-    </div>
-    <nav class="flex-1 p-4 space-y-2 p-4">
-      <script>
-        for (let i = 1; i <= 10; i++) {
-          document.write(`
-            <button class="flex items-center gap-3 px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition w-full text-sm text-left"
-                    onclick="scrollToSection('paragraph-${i}')">
-              Paragrafo ${i}
-            </button>
-          `);
-        }
-      </script>
-    </nav>
-    <div class="p-4 border-t border-gray-700 text-sm text-gray-400">
-      <a href="./index.html">Torna alla pagina iniziale</a>
-    </div>
-  </aside>
+<body class="flex h-screen bg-gray-50">
 
-  <div class="flex-1 flex flex-col overflow-hidden">
-    <header class="bg-white shadow px-6 py-4 flex items-center justify-between">
-      <h1 class="text-xl font-semibold text-gray-800">Limewire e la Guerra del Diritto d'Autore</h1>
-    </header>
-
-    <main class="flex-1 overflow-y-auto p-6 text-wrap">
-      <h1 class="text-gray-800 text-lg font-bold"
-          id="paragraph-1">1. Il Regime della Scarsità Artificiale e l'Oligopolio delle "Big Six"</h1>
-      <p class="text-gray-600 font-normal mb-3">Fino al tramonto degli anni Novanta, l'industria discografica globale operava come un sistema chiuso e rigidamente controllato. Il mercato era dominato dalle cosiddette Big Six (Warner, EMI, Sony, BMG, Universal e PolyGram), conglomerati che gestivano ogni singolo anello della catena del valore: dalla scoperta dei talenti (A&R) alla produzione fisica, fino alla saturazione degli scaffali nei negozi e delle frequenze radiofoniche. In questo scenario di "scarsità artificiale", il consumatore era un soggetto passivo, costretto a muoversi entro confini predeterminati dalle major. Le etichette indipendenti, prive di capitali per la distribuzione di massa, rimanevano confinate in mercati di nicchia, mentre il pubblico si trovava spesso di fronte a una scelta limitata, metaforicamente descritta come l'obbligo di scegliere tra "Coke e Pepsi", senza reali alternative mainstream.</p>
-
-      <h1 class="text-gray-800 text-lg font-bold"
-          id="paragraph-2">2. Il 1999: L'Apice del CD e l'Inizio della "Napsterizzazione"</h1>
-      <p class="text-gray-600 font-normal mb-3">Il 1999 segnò il culmine economico del vecchio modello, con un fatturato globale di circa 38 miliardi di dollari generato quasi interamente dalla vendita di supporti fisici. Tuttavia, proprio in questo momento di massimo splendore, la nascita di Napster innescò un terremoto cibernetico. Il software introdusse la "Napsterizzazione" della cultura: la musica venne separata dal suo supporto fisico, trasformata in file MP3 e resa fluida. Questa dematerializzazione non fu solo una sfida tecnica, ma una rivoluzione semantica: il brano musicale cessava di essere un oggetto da possedere e diventava un'informazione da condividere, scardinando per la prima volta il potere di veto delle major sulla distribuzione.</p>
-
-      <h1 class="text-gray-800 text-lg font-bold"
-          id="paragraph-3">3. La Resilienza di LimeWire e l'Architettura Gnutella</h1>
-      <p class="text-gray-600 font-normal mb-3">Dopo che le sentenze giudiziarie misero fine all'era di Napster (colpevole di gestire server centralizzati), la tecnologia P2P compì un balzo evolutivo verso la decentralizzazione pura. LimeWire, lanciato nel 2000, adottò il protocollo Gnutella, un'architettura distribuita dove ogni utente (nodo) agiva simultaneamente come fruitore e distributore di dati. Questa struttura eliminava il "single point of failure": non esisteva più un server centrale da sequestrare. La rete divenne una sorta di organismo digitale resiliente e quasi indistruttibile, capace di resistere ai tentativi di censura e di portare la democratizzazione dell'accesso alla cultura a un livello di massa senza precedenti storici.</p>
-
-      <h1 class="text-gray-800 text-lg font-bold"
-          id="paragraph-4">4. La Strategia della "Terra Bruciata": La RIAA contro i Consumatori</h1>
-      <p class="text-gray-600 font-normal mb-3">La Recording Industry Association of America (RIAA), incapace di arginare tecnologicamente il fenomeno, scelse la via della repressione legale indiscriminata. Tra il 2003 e il 2008, l'associazione lanciò un'offensiva giudiziaria senza precedenti, citando in giudizio migliaia di singoli utenti, inclusi studenti, casalinghe e anziani. L'obiettivo era creare un "deterrente psicologico" attraverso sanzioni pecuniarie esorbitanti. Sebbene questa strategia di "terra bruciata" abbia inizialmente rallentato la pirateria, produsse un effetto boomerang reputazionale: le major iniziarono a essere viste come giganti anacronistici e ostili che lottavano contro i propri stessi clienti anziché innovare.</p>
-
-      <h1 class="text-gray-800 text-lg font-bold"
-          id="paragraph-5">5. Il Caso Grokster e l'Induzione alla Violazione</h1>
-      <p class="text-gray-600 font-normal mb-3">La battaglia legale raggiunse il suo zenit dottrinale nel 2005, quando la Corte Suprema degli Stati Uniti emise la sentenza nel caso MGM Studios, Inc. v. Grokster, Ltd.. La Corte introdusse il principio della responsabilità per induzione (inducement liability): un'azienda tecnologica non poteva più limitarsi a dichiarare la neutralità del proprio software se veniva dimostrato che lo promuoveva attivamente per fini illeciti. Questa decisione spostò l'ago della bilancia a favore dei detentori di copyright e fornì la base legale per l'ingiunzione che, nel 2010, avrebbe costretto LimeWire a chiudere i battenti e a installare un "kill switch" remoto per disabilitare il software su scala globale.</p>
-
-      <h1 class="text-gray-800 text-lg font-bold"
-          id="paragraph-6">6. Il Declino Tecnico e la "Infezione" delle Reti P2P</h1>
-      <p class="text-gray-600 font-normal mb-3">Parallelamente alle pressioni legali, LimeWire dovette affrontare un degrado qualitativo interno. L'assenza di moderazione centrale rese la rete Gnutella un ecosistema vulnerabile alla diffusione di malware, virus e file corrotti. Studi accademici, come quelli condotti da Kalafut alla Indiana University, rivelarono che una percentuale enorme dei file più ricercati era in realtà costituita da eseguibili malevoli mascherati da brani MP3. La crescente frustrazione degli utenti per i "file fake" e i rischi di sicurezza informatica iniziò a erodere l'attrattiva del P2P gratuito, creando le premesse per il successo di piattaforme centralizzate e sicure.</p>
-
-      <h1 class="text-gray-800 text-lg font-bold"
-          id="paragraph-7">7. iTunes e la Nascita dell'Economia dell'Unbundling</h1>
-      <p class="text-gray-600 font-normal mb-3">Mentre il mondo P2P barcollava, Apple presentò l'iTunes Store nel 2003, proponendo un compromesso accettabile per le major. La vera rivoluzione di iTunes fu l'unbundling: la possibilità per l'utente di acquistare un singolo brano a 0,99 dollari invece di essere costretto a comprare l'intero album. Questo modello riconosceva la validità del comportamento dei consumatori nel P2P (che scaricavano solo le hit) ma lo riportava entro un alveo di legalità e qualità garantita. Pur essendo ancora basato sul "possesso" digitale, iTunes fu il ponte necessario tra l'era del disco fisico e quella del servizio.</p>
-
-      <h1 class="text-gray-800 text-lg font-bold"
-          id="paragraph-8">8. L'Era dello Streaming: Il Passaggio dal Possesso all'Accesso</h1>
-      <p class="text-gray-600 font-normal mb-3">La trasformazione definitiva del settore si è compiuta con l'avvento dello streaming guidato da piattaforme come Spotify. Il modello economico è migrato radicalmente dall'acquisto dell'oggetto (sia esso un CD o un file MP3) all'abbonamento per l'accesso a un catalogo universale. La musica è diventata un servizio simile a un'utenza domestica. Questo cambiamento ha risolto quasi totalmente il problema della pirateria attraverso la comodità d'uso e la personalizzazione algoritmica, ma ha anche trasformato la musica in un "flusso di dati" (streaming), spostando il valore dal contenuto in sé alla piattaforma che ne gestisce l'erogazione.</p>
-
-      <h1 class="text-gray-800 text-lg font-bold"
-          id="paragraph-9">9. La Ricentralizzazione del Potere e l'Equità per gli Artisti</h1>
-      <p class="text-gray-600 font-normal mb-3">Nonostante la ripresa dei fatturati grazie allo streaming, la questione dell'equità rimane aperta. Se da un lato il digitale ha rimosso le barriere fisiche alla pubblicazione, dall'altro ha ricentralizzato il potere nelle mani delle Big Three (Universal, Sony, Warner), che detengono i diritti sui cataloghi storici necessari alle piattaforme. Per molti artisti, il sistema dei compensi "per streaming" risulta meno remunerativo rispetto alla vendita dei CD, portando a una situazione paradossale: la musica è ovunque e più accessibile che mai, ma la sostenibilità economica per i creatori indipendenti è diventata una sfida legata a volumi di ascolto astronomici e al controllo algoritmico della visibilità.</p>
-
-      <h1 class="text-gray-800 text-lg font-bold"
-          id="paragraph-10">10. Conclusione: L'Eredità Duratura del "Big Bang" Digitale</h1>
-      <p class="text-gray-600 font-normal">LimeWire e la rivoluzione P2P degli anni 2000 non sono stati semplici episodi di pirateria di massa, ma il catalizzatore di un cambiamento ontologico nel rapporto tra società, diritto e tecnologia. Hanno costretto il sistema giuridico a ripensare il copyright per l'era dell'abbondanza e hanno obbligato un'industria conservatrice a digitalizzarsi per sopravvivere. Oggi viviamo nelle rovine di quel conflitto: un mondo dove la musica ha perso la sua fisicità per acquisire un'ubiquità totale, definendo un nuovo equilibrio tra la tutela dell'ingegno e la libertà dell'informazione digitale.</p>
-    </main>
+<aside id="sidebar" class="w-72 bg-slate-900 text-white flex flex-col transition-transform overflow-y-auto">
+  <div class="p-6 text-lg font-bold border-b border-slate-800 sticky top-0 bg-slate-900 z-10 flex items-center gap-2">
+    <i class="bi bi-journal-text"></i> Indice
   </div>
+  <nav class="flex-1 p-4">
 
-  <script>
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('sidebar-overlay');
+    <button class="flex items-center gap-3 px-4 py-2 rounded-lg bg-slate-800 hover:bg-indigo-600 transition-all w-full text-sm text-left mb-1 group"
+            onclick="scrollToSection('paragraph-1')">
+      <span class="text-slate-400 group-hover:text-white transition-colors">1. Il Regime della Scarsità Artificiale e l&#x27;Oligopolio delle &quot;Big Six&quot;</span>
+    </button>
+    <button class="flex items-center gap-3 px-4 py-2 rounded-lg bg-slate-800 hover:bg-indigo-600 transition-all w-full text-sm text-left mb-1 group"
+            onclick="scrollToSection('paragraph-2')">
+      <span class="text-slate-400 group-hover:text-white transition-colors">2. Il 1999: L&#x27;Apice del CD e l&#x27;Inizio della &quot;Napsterizzazione&quot;</span>
+    </button>
+    <button class="flex items-center gap-3 px-4 py-2 rounded-lg bg-slate-800 hover:bg-indigo-600 transition-all w-full text-sm text-left mb-1 group"
+            onclick="scrollToSection('paragraph-3')">
+      <span class="text-slate-400 group-hover:text-white transition-colors">3. La Resilienza di LimeWire e l&#x27;Architettura Gnutella</span>
+    </button>
+    <button class="flex items-center gap-3 px-4 py-2 rounded-lg bg-slate-800 hover:bg-indigo-600 transition-all w-full text-sm text-left mb-1 group"
+            onclick="scrollToSection('paragraph-4')">
+      <span class="text-slate-400 group-hover:text-white transition-colors">4. La Strategia della &quot;Terra Bruciata&quot;: La RIAA contro i Consumatori</span>
+    </button>
+    <button class="flex items-center gap-3 px-4 py-2 rounded-lg bg-slate-800 hover:bg-indigo-600 transition-all w-full text-sm text-left mb-1 group"
+            onclick="scrollToSection('paragraph-5')">
+      <span class="text-slate-400 group-hover:text-white transition-colors">5. Il Caso Grokster e l&#x27;Induzione alla Violazione</span>
+    </button>
+    <button class="flex items-center gap-3 px-4 py-2 rounded-lg bg-slate-800 hover:bg-indigo-600 transition-all w-full text-sm text-left mb-1 group"
+            onclick="scrollToSection('paragraph-6')">
+      <span class="text-slate-400 group-hover:text-white transition-colors">6. Il Declino Tecnico e la &quot;Infezione&quot; delle Reti P2P</span>
+    </button>
+    <button class="flex items-center gap-3 px-4 py-2 rounded-lg bg-slate-800 hover:bg-indigo-600 transition-all w-full text-sm text-left mb-1 group"
+            onclick="scrollToSection('paragraph-7')">
+      <span class="text-slate-400 group-hover:text-white transition-colors">7. iTunes e la Nascita dell&#x27;Economia dell&#x27;Unbundling</span>
+    </button>
+    <button class="flex items-center gap-3 px-4 py-2 rounded-lg bg-slate-800 hover:bg-indigo-600 transition-all w-full text-sm text-left mb-1 group"
+            onclick="scrollToSection('paragraph-8')">
+      <span class="text-slate-400 group-hover:text-white transition-colors">8. L&#x27;Era dello Streaming: Il Passaggio dal Possesso all&#x27;Accesso</span>
+    </button>
+    <button class="flex items-center gap-3 px-4 py-2 rounded-lg bg-slate-800 hover:bg-indigo-600 transition-all w-full text-sm text-left mb-1 group"
+            onclick="scrollToSection('paragraph-9')">
+      <span class="text-slate-400 group-hover:text-white transition-colors">9. La Ricentralizzazione del Potere e l&#x27;Equità per gli Artisti</span>
+    </button>
+    <button class="flex items-center gap-3 px-4 py-2 rounded-lg bg-slate-800 hover:bg-indigo-600 transition-all w-full text-sm text-left mb-1 group"
+            onclick="scrollToSection('paragraph-10')">
+      <span class="text-slate-400 group-hover:text-white transition-colors">10. Conclusione: L&#x27;Eredità Duratura del &quot;Big Bang&quot; Digitale</span>
+    </button>
+  </nav>
+  <div class="p-4 border-t border-slate-800 text-xs text-slate-500">
+    <a href="./index.html" class="hover:text-indigo-400 transition-colors flex items-center gap-2">
+      <i class="bi bi-arrow-left"></i> Torna alla Home
+    </a>
+  </div>
+</aside>
 
-    function toggleSidebar() {
-      const isOpen = sidebar.classList.contains('translate-x-0');
+<div class="flex-1 flex flex-col overflow-hidden">
+  <header class="bg-white border-b border-gray-200 px-8 py-4 flex items-center justify-between shadow-sm">
+    <h1 class="text-lg font-semibold text-slate-700">Il Diritto d'Autore e l'Era della Condivisione: L'Impatto di LimeWire e del P2P</h1>
+  </header>
 
-      if (isOpen) {
-        sidebar.classList.remove('translate-x-0');
-        sidebar.classList.add('-translate-x-full');
-        overlay.classList.add('hidden');
-      } else {
-        sidebar.classList.remove('-translate-x-full');
-        sidebar.classList.add('translate-x-0');
-        overlay.classList.remove('hidden');
-      }
+  <main class="flex-1 overflow-y-auto p-8 md:px-20 lg:px-48 bg-white">
+    <article class="max-w-4xl mx-auto">
+
+      <h1 class="text-gray-800 text-2xl font-bold mt-12 mb-6 border-b-2 border-slate-200 pb-2 uppercase tracking-wide" id="paragraph-1">
+        1. Il Regime della Scarsità Artificiale e l&#x27;Oligopolio delle &quot;Big Six&quot;
+      </h1>
+      <p class="text-gray-600 font-normal mb-5 leading-relaxed text-justify">Fino al tramonto degli anni Novanta, l&#x27;industria discografica globale operava come un sistema chiuso e rigidamente controllato. Il mercato era dominato dalle cosiddette <b>Big Six</b> (Warner, EMI, Sony, BMG, Universal e PolyGram), conglomerati che gestivano ogni singolo anello della catena del valore: dalla scoperta dei talenti (A&amp;R) alla produzione fisica, fino alla saturazione degli scaffali nei negozi e delle frequenze radiofoniche. In questo scenario di &quot;scarsità artificiale&quot;, il consumatore era un soggetto passivo, costretto a muoversi entro confini predeterminati dalle major. Le etichette indipendenti, prive di capitali per la distribuzione di massa, rimanevano confinate in mercati di nicchia, mentre il pubblico si trovava spesso di fronte a una scelta limitata, metaforicamente descritta come l&#x27;obbligo di scegliere tra &quot;Coke e Pepsi&quot;, senza reali alternative mainstream.</p>
+      <h1 class="text-gray-800 text-2xl font-bold mt-12 mb-6 border-b-2 border-slate-200 pb-2 uppercase tracking-wide" id="paragraph-2">
+        2. Il 1999: L&#x27;Apice del CD e l&#x27;Inizio della &quot;Napsterizzazione&quot;
+      </h1>
+      <p class="text-gray-600 font-normal mb-5 leading-relaxed text-justify">Il 1999 segnò il culmine economico del vecchio modello, con un fatturato globale di circa 38 miliardi di dollari generato quasi interamente dalla vendita di supporti fisici. Tuttavia, proprio in questo momento di massimo splendore, la nascita di <b>Napster</b> innescò un terremoto cibernetico. Il software introdusse la &quot;Napsterizzazione&quot; della cultura: la musica venne separata dal suo supporto fisico, trasformata in file MP3 e resa fluida. Questa dematerializzazione non fu solo una sfida tecnica, ma una rivoluzione semantica: il brano musicale cessava di essere un oggetto da possedere e diventava un&#x27;informazione da condividere, scardinando per la prima volta il potere di veto delle major sulla distribuzione.</p>
+      <h1 class="text-gray-800 text-2xl font-bold mt-12 mb-6 border-b-2 border-slate-200 pb-2 uppercase tracking-wide" id="paragraph-3">
+        3. La Resilienza di LimeWire e l&#x27;Architettura Gnutella
+      </h1>
+      <p class="text-gray-600 font-normal mb-5 leading-relaxed text-justify">Dopo che le sentenze giudiziarie misero fine all&#x27;era di Napster (colpevole di gestire server centralizzati), la tecnologia P2P compì un balzo evolutivo verso la decentralizzazione pura. <b>LimeWire</b>, lanciato nel 2000, adottò il protocollo <b>Gnutella</b>, un&#x27;architettura distribuita dove ogni utente (nodo) agiva simultaneamente come fruitore e distributore di dati. Questa struttura eliminava il &quot;single point of failure&quot;: non esisteva più un server centrale da sequestrare. La rete divenne una sorta di organismo digitale resiliente e quasi indistruttibile, capace di resistere ai tentativi di censura e di portare la democratizzazione dell&#x27;accesso alla cultura a un livello di massa senza precedenti storici.</p>
+      <h1 class="text-gray-800 text-2xl font-bold mt-12 mb-6 border-b-2 border-slate-200 pb-2 uppercase tracking-wide" id="paragraph-4">
+        4. La Strategia della &quot;Terra Bruciata&quot;: La RIAA contro i Consumatori
+      </h1>
+      <p class="text-gray-600 font-normal mb-5 leading-relaxed text-justify">La Recording Industry Association of America (RIAA), incapace di arginare tecnologicamente il fenomeno, scelse la via della repressione legale indiscriminata. Tra il 2003 e il 2008, l&#x27;associazione lanciò un&#x27;offensiva giudiziaria senza precedenti, citando in giudizio migliaia di singoli utenti, inclusi studenti, casalinghe e anziani. L&#x27;obiettivo era creare un &quot;deterrente psicologico&quot; attraverso sanzioni pecuniarie esorbitanti. Sebbene questa strategia di &quot;terra bruciata&quot; abbia inizialmente rallentato la pirateria, produsse un effetto boomerang reputazionale: le major iniziarono a essere viste come giganti anacronistici e ostili che lottavano contro i propri stessi clienti anziché innovare.</p>
+      <h1 class="text-gray-800 text-2xl font-bold mt-12 mb-6 border-b-2 border-slate-200 pb-2 uppercase tracking-wide" id="paragraph-5">
+        5. Il Caso Grokster e l&#x27;Induzione alla Violazione
+      </h1>
+      <p class="text-gray-600 font-normal mb-5 leading-relaxed text-justify">La battaglia legale raggiunse il suo zenit dottrinale nel 2005, quando la Corte Suprema degli Stati Uniti emise la sentenza nel caso <i>MGM Studios, Inc. v. Grokster, Ltd.</i>. La Corte introdusse il principio della <b>responsabilità per induzione</b> (<i>inducement liability</i>): un&#x27;azienda tecnologica non poteva più limitarsi a dichiarare la neutralità del proprio software se veniva dimostrato che lo promuoveva attivamente per fini illeciti. Questa decisione spostò l&#x27;ago della bilancia a favore dei detentori di copyright e fornì la base legale per l&#x27;ingiunzione che, nel 2010, avrebbe costretto LimeWire a chiudere i battenti e a installare un &quot;kill switch&quot; remoto per disabilitare il software su scala globale.</p>
+      <h1 class="text-gray-800 text-2xl font-bold mt-12 mb-6 border-b-2 border-slate-200 pb-2 uppercase tracking-wide" id="paragraph-6">
+        6. Il Declino Tecnico e la &quot;Infezione&quot; delle Reti P2P
+      </h1>
+      <p class="text-gray-600 font-normal mb-5 leading-relaxed text-justify">Parallelamente alle pressioni legali, LimeWire dovette affrontare un degrado qualitativo interno. L&#x27;assenza di moderazione centrale rese la rete Gnutella un ecosistema vulnerabile alla diffusione di malware, virus e file corrotti. Studi accademici, come quelli condotti da Kalafut alla Indiana University, rivelarono che una percentuale enorme dei file più ricercati era in realtà costituita da eseguibili malevoli mascherati da brani MP3. La crescente frustrazione degli utenti per i &quot;file fake&quot; e i rischi di sicurezza informatica iniziò a erodere l&#x27;attrattiva del P2P gratuito, creando le premesse per il successo di piattaforme centralizzate e sicure.</p>
+      <h1 class="text-gray-800 text-2xl font-bold mt-12 mb-6 border-b-2 border-slate-200 pb-2 uppercase tracking-wide" id="paragraph-7">
+        7. iTunes e la Nascita dell&#x27;Economia dell&#x27;Unbundling
+      </h1>
+      <p class="text-gray-600 font-normal mb-5 leading-relaxed text-justify">Mentre il mondo P2P barcollava, Apple presentò l&#x27;iTunes Store nel 2003, proponendo un compromesso accettabile per le major. La vera rivoluzione di iTunes fu l&#x27;<b>unbundling</b>: la possibilità per l&#x27;utente di acquistare un singolo brano a 0,99 dollari invece di essere costretto a comprare l&#x27;intero album. Questo modello riconosceva la validità del comportamento dei consumatori nel P2P (che scaricavano solo le hit) ma lo riportava entro un alveo di legalità e qualità garantita. Pur essendo ancora basato sul &quot;possesso&quot; digitale, iTunes fu il ponte necessario tra l&#x27;era del disco fisico e quella del servizio.</p>
+      <h1 class="text-gray-800 text-2xl font-bold mt-12 mb-6 border-b-2 border-slate-200 pb-2 uppercase tracking-wide" id="paragraph-8">
+        8. L&#x27;Era dello Streaming: Il Passaggio dal Possesso all&#x27;Accesso
+      </h1>
+      <p class="text-gray-600 font-normal mb-5 leading-relaxed text-justify">La trasformazione definitiva del settore si è compiuta con l&#x27;avvento dello streaming guidato da piattaforme come <b>Spotify</b>. Il modello economico è migrato radicalmente dall&#x27;acquisto dell&#x27;oggetto (sia esso un CD o un file MP3) all&#x27;abbonamento per l&#x27;accesso a un catalogo universale. La musica è diventata un servizio simile a un&#x27;utenza domestica. Questo cambiamento ha risolto quasi totalmente il problema della pirateria attraverso la comodità d&#x27;uso e la personalizzazione algoritmica, ma ha anche trasformato la musica in un &quot;flusso di dati&quot; (streaming), spostando il valore dal contenuto in sé alla piattaforma che ne gestisce l&#x27;erogazione.</p>
+      <h1 class="text-gray-800 text-2xl font-bold mt-12 mb-6 border-b-2 border-slate-200 pb-2 uppercase tracking-wide" id="paragraph-9">
+        9. La Ricentralizzazione del Potere e l&#x27;Equità per gli Artisti
+      </h1>
+      <p class="text-gray-600 font-normal mb-5 leading-relaxed text-justify">Nonostante la ripresa dei fatturati grazie allo streaming, la questione dell&#x27;equità rimane aperta. Se da un lato il digitale ha rimosso le barriere fisiche alla pubblicazione, dall&#x27;altro ha ricentralizzato il potere nelle mani delle <b>Big Three</b> (Universal, Sony, Warner), che detengono i diritti sui cataloghi storici necessari alle piattaforme. Per molti artisti, il sistema dei compensi &quot;per streaming&quot; risulta meno remunerativo rispetto alla vendita dei CD, portando a una situazione paradossale: la musica è ovunque e più accessibile che mai, ma la sostenibilità economica per i creatori indipendenti è diventata una sfida legata a volumi di ascolto astronomici e al controllo algoritmico della visibilità.</p>
+      <h1 class="text-gray-800 text-2xl font-bold mt-12 mb-6 border-b-2 border-slate-200 pb-2 uppercase tracking-wide" id="paragraph-10">
+        10. Conclusione: L&#x27;Eredità Duratura del &quot;Big Bang&quot; Digitale
+      </h1>
+      <p class="text-gray-600 font-normal mb-5 leading-relaxed text-justify">LimeWire e la rivoluzione P2P degli anni 2000 non sono stati semplici episodi di pirateria di massa, ma il catalizzatore di un cambiamento ontologico nel rapporto tra società, diritto e tecnologia. Hanno costretto il sistema giuridico a ripensare il copyright per l&#x27;era dell&#x27;abbondanza e hanno obbligato un&#x27;industria conservatrice a digitalizzarsi per sopravvivere. Oggi viviamo nelle rovine di quel conflitto: un mondo dove la musica ha perso la sua fisicità per acquisire un&#x27;ubiquità totale, definendo un nuovo equilibrio tra la tutela dell&#x27;ingegno e la libertà dell&#x27;informazione digitale.</p>
+    </article>
+  </main>
+</div>
+
+<script>
+  function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
+  }
+</script>
 </body>
 </html>
