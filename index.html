@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Limewire e la Guerra del Diritto d'Autore</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <link rel='stylesheet' href='./style.css'>
+</head>
+<body class="flex flex-col min-h-screen">
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex items-center gap-2">
+          <div class="w-2 h-2 bg-lime-500 rounded-full flex items-center justify-center text-white text-xs font-bold font-mono"></div>
+          <span class="font-bold text-xl tracking-tight text-slate-800">I diritti d'autore: <span class="text-lime-600">LIMEWIRE</span></span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <button onclick="scrollToSection('timeline')" class="text-slate-500 hover:text-lime-600 transition-colors text-sm font-medium">Cronologia</button>
+          <button onclick="scrollToSection('economics')" class="text-slate-500 hover:text-lime-600 transition-colors text-sm font-medium">Impatto Economico</button>
+          <button onclick="scrollToSection('tech')" class="text-slate-500 hover:text-lime-600 transition-colors text-sm font-medium">La Tecnologia</button>
+          <button onclick="scrollToSection('legal')" class="text-slate-500 hover:text-lime-600 transition-colors text-sm font-medium">Il Diritto</button>
+        </div>
+        <button class="md:hidden text-slate-500 hover:text-lime-600">
+          <span class="text-2xl">≡</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <main class="flex-grow">
+    <section class="relative bg-slate-50 border-b border-slate-200 overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 py-32 sm:px-6 lg:px-12 text-center relative z-10">
+        <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-lime-700 uppercase bg-lime-100 rounded-full">
+          Analisi Storica & Giuridica
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
+          Il Diritto d'Autore nell'Era del <br class="hidden md:block" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-lime-500 to-green-700">Peer-to-Peer</span>
+        </h1>
+        <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-600">
+          Come <strong>Limewire</strong> ha sfidato l'industria musicale, ridefinito la pirateria digitale e costretto alla riscrittura delle leggi sul copyright nei primi anni 2000.
+        </p>
+      </div>
+
+      <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+        <div class="absolute top-10 left-10 text-9xl font-mono text-slate-400 select-none">10101</div>
+        <div class="absolute bottom-20 right-10 text-8xl font-mono text-slate-400 select-none">00110</div>
+      </div>
+    </section>
+
+    <section id="timeline" class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="mb-10">
+          <h2 class="text-3xl font-bold text-slate-900">L'Ascesa e la Caduta</h2>
+          <p class="mt-2 text-slate-600 max-w-3xl">
+            Per comprendere la battaglia legale, dobbiamo guardare la sequenza temporale. Gli anni 2000 sono stati un "Far West" digitale dove la tecnologia correva più veloce della legislazione. Clicca sugli anni per vedere gli eventi chiave.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 rounded-xl p-8 md:p-10 border border-slate-200 shadow-sm">
+          <div class="flex overflow-x-auto p-[10px] pb-4 gap-4 mb-6 border-b border-slate-200 hide-scrollbar" id="timeline-nav">
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center" id="timeline-content">
+            <div class="md:col-span-1">
+              <div class="text-6xl font-black text-slate-200" id="year-display">2000</div>
+              <div class="mt-2 text-sm font-mono text-lime-600" id="stat-display">Utenti: 0 Milioni</div>
+            </div>
+            <div class="md:col-span-2">
+              <h3 class="text-2xl font-bold text-slate-800 mb-3" id="event-title">Lancio di Gnutella</h3>
+              <p class="text-slate-600 leading-relaxed" id="event-desc">
+                Descrizione dell'evento...
+              </p>
+              <div class="mt-4 p-4 bg-white rounded border-l-4 border-lime-500 text-sm text-slate-500 italic" id="event-quote">
+                "Contesto giuridico..."
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="economics" class="py-24 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div class="lg:col-span-1">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">Il Crollo dei Ricavi</h2>
+            <p class="text-slate-600 mb-6">
+              Mentre la condivisione file su piattaforme come Limewire esplodeva, le vendite fisiche di CD crollavano drasticamente.
+            </p>
+            <div class="space-y-4">
+              <div class="p-6 bg-white rounded-lg shadow-sm border border-slate-200">
+                <h4 class="font-bold text-slate-800">Danno Stimato</h4>
+                <p class="text-3xl font-mono text-red-500">-50%</p>
+                <p class="text-xs text-slate-500">Ricavi globali musica registrata (1999-2010)</p>
+              </div>
+              <div class="p-6 bg-white rounded-lg shadow-sm border border-slate-200">
+                <h4 class="font-bold text-slate-800">Richiesta Danni RIAA</h4>
+                <p class="text-3xl font-mono text-red-500">$75 Trillion</p>
+                <p class="text-xs text-slate-500">Cifra assurda calcolata sommando le violazioni (più del PIL mondiale).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+              <div class="chart-container">
+                <canvas id="revenueChart"></canvas>
+              </div>
+              <p class="text-center text-xs text-slate-400 mt-2">Dati approssimativi basati su report RIAA/IFPI (Miliardi USD)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="tech" class="py-24 bg-white border-t border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-slate-900">Centralizzato vs. Decentralizzato</h2>
+          <p class="mt-4 text-slate-600 max-w-2xl mx-auto">
+            Napster fu chiuso spegnendo i server centrali. Limewire usava il protocollo <strong>Gnutella</strong>, una rete decentralizzata. Prova a "spegnere" i nodi qui sotto per vedere la differenza.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-slate-50 p-8 rounded-xl border border-slate-200">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="font-bold text-lg">Modello Centralizzato (Napster)</h3>
+              <button onclick="resetSim('central')" class="text-xs bg-slate-200 px-2 py-1 rounded hover:bg-slate-300">Reset</button>
+            </div>
+            <p class="text-sm text-slate-500 mb-4 h-10">Clicca sul Server Centrale (Rosso) per chiudere la rete.</p>
+
+            <div class="relative h-64 bg-white border border-slate-100 rounded-lg flex items-center justify-center overflow-hidden" id="napster-container"></div>
+          </div>
+
+
+          <div class="bg-slate-50 p-8 rounded-xl border border-slate-200">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="font-bold text-lg">Modello Decentralizzato (Limewire/Gnutella)</h3>
+              <button onclick="resetSim('p2p')" class="text-xs bg-slate-200 px-2 py-1 rounded hover:bg-slate-300">Reset</button>
+            </div>
+            <p class="text-sm text-slate-500 mb-4 h-10">Clicca su un nodo qualsiasi. La rete sopravvive perché non c'è un centro unico.</p>
+
+            <div class="relative h-64 bg-white border border-slate-100 rounded-lg overflow-hidden" id="gnutella-container"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="legal" class="py-24 bg-slate-900 text-slate-100">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12">
+        <h2 class="text-3xl font-bold mb-8 text-center"><span class="text-lime-400">Arista Records LLC v. Lime Group LLC</span></h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="md:col-span-1 space-y-2">
+            <button onclick="showLegalTab('arg1')"
+                    class="legal-tab w-full text-left px-6 py-4 rounded bg-slate-800 hover:bg-slate-700 transition-colors border-l-4 border-transparent focus:border-lime-500 text-sm font-semibold text-slate-300 active-tab">
+              L'Accusa
+            </button>
+            <button onclick="showLegalTab('arg2')"
+                    class="legal-tab w-full text-left px-6 py-4 rounded bg-slate-800 hover:bg-slate-700 transition-colors border-l-4 border-transparent focus:border-lime-500 text-sm font-semibold text-slate-300">
+              La Difesa
+            </button>
+            <button onclick="showLegalTab('verdict')"
+                    class="legal-tab w-full text-left px-6 py-4 rounded bg-slate-800 hover:bg-slate-700 transition-colors border-l-4 border-transparent focus:border-lime-500 text-sm font-semibold text-slate-300">
+              Il Verdetto
+            </button>
+            <button onclick="showLegalTab('concept')"
+                    class="legal-tab w-full text-left px-6 py-4 rounded bg-slate-800 hover:bg-slate-700 transition-colors border-l-4 border-transparent focus:border-lime-500 text-sm font-semibold text-slate-300">
+              Inducement Rule
+            </button>
+          </div>
+
+
+          <div class="md:col-span-3 bg-slate-800 rounded-xl p-10 lg:p-12 border border-slate-700 min-h-[300px]">
+            <div id="arg1" class="legal-content fade-in">
+              <h3 class="text-2xl font-bold text-white mb-4">L'Argomento dell'Accusa (RIAA)</h3>
+              <p class="text-slate-300 mb-4 leading-relaxed">
+                Le case discografiche sostenevano che Lime Group (sviluppatore di Limewire) fosse responsabile di <strong>violazione contributiva</strong> e <strong>violazione vicaria</strong> del copyright.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-center gap-3">
+                  <i class="bi bi-x-lg text-red-400"></i>
+                  <span class="text-slate-400 text-sm">Limewire sapeva che gli utenti scambiavano file protetti.</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="bi bi-x-lg text-red-400"></i>
+                  <span class="text-slate-400 text-sm">Traevano profitto diretto dalla pirateria tramite la versione "Pro".</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="bi bi-x-lg text-red-400"></i>
+                  <span class="text-slate-400 text-sm">Non hanno implementato filtri efficaci per bloccare contenuti illegali.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div id="arg2" class="legal-content hidden fade-in">
+              <h3 class="text-2xl font-bold text-white mb-4">La Difesa di Limewire</h3>
+              <p class="text-slate-300 mb-4 leading-relaxed">
+                Limewire ha tentato di usare la difesa "Sony Betamax" (Sony Corp. v. Universal City Studios, 1984).
+              </p>
+              <div class="bg-slate-900 p-4 rounded border border-slate-600 mb-4">
+                <p class="italic text-slate-400 text-sm">
+                  "La tecnologia ha usi sostanziali non fraudolenti (condivisione di file open source, documenti, opere di pubblico dominio)."
+                </p>
+              </div>
+              <p class="text-slate-300 text-sm">
+                Sostenevano di essere solo fornitore di uno strumento neutrale, senza controllo su come gli utenti lo utilizzassero, data la natura decentralizzata della rete.
+              </p>
+            </div>
+
+            <div id="verdict" class="legal-content hidden fade-in">
+              <h3 class="text-2xl font-bold text-white mb-4">Il Verdetto (2010)</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <div class="bg-lime-900/30 p-4 rounded border border-lime-700/50">
+                  <h4 class="font-bold text-lime-400">Colpevole</h4>
+                  <p class="text-xs text-slate-400 mt-1">La corte ha stabilito che Limewire induceva attivamente alla violazione.</p>
+                </div>
+                <div class="bg-red-900/30 p-4 rounded border border-red-700/50">
+                  <h4 class="font-bold text-red-400">Shutdown</h4>
+                  <p class="text-xs text-slate-400 mt-1">Ingiunzione permanente per disabilitare la funzionalità di ricerca/upload.</p>
+                </div>
+              </div>
+              <p class="text-slate-300 text-sm">
+                Lime Group ha accettato di pagare <strong>$105 milioni</strong> in un accordo extragiudiziale per evitare ulteriori danni che avrebbero potuto raggiungere miliardi.
+              </p>
+            </div>
+
+            <div id="concept" class="legal-content hidden fade-in">
+              <h3 class="text-2xl font-bold text-white mb-4">La "Inducement Rule"</h3>
+              <p class="text-slate-300 mb-4 text-sm leading-relaxed">
+                Un concetto chiave derivato dal caso <em>MGM Studios, Inc. v. Grokster, Ltd.</em> (2005).
+              </p>
+              <p class="text-slate-300 mb-4 text-sm leading-relaxed">
+                Non importa se la tecnologia ha usi legali; se l'azienda <strong>promuove attivamente</strong> l'uso illegale o costruisce un modello di business basato sulla violazione, è responsabile.
+              </p>
+              <div class="flex items-center gap-2 mt-4 text-lime-400 text-sm font-mono">
+                <span>Evidence:</span>
+                <span class="bg-slate-900 px-2 py-1 rounded">Marketing mirato agli ex-utenti Napster</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-slate-50 border-t border-slate-200 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
+        <h3 class="text-xl font-bold text-slate-900 mb-4">L'Eredità</h3>
+        <p class="text-slate-600 max-w-2xl mx-auto mb-8">
+          La morte di Limewire non ha fermato la musica digitale; l'ha normalizzata. L'industria ha capito che non poteva combattere la convenienza con le cause legali. La risposta è stata lo <strong>streaming</strong> (Spotify, Apple Music), che ha monetizzato l'accesso invece del possesso.
+        </p>
+        <div class="flex justify-center gap-4 text-slate-400 text-sm">
+          <a href='./documento.html'>Documento di riferimento</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const timelineData = [
+      {
+        year: 1999,
+        title: "Napster Cambia Tutto",
+        desc: "Shawn Fanning lancia Napster. Per la prima volta, gli MP3 sono facilmente accessibili. L'industria musicale entra nel panico.",
+        stat: "Utenti: 10M+",
+        quote: "Inizia la rivoluzione P2P centralizzata."
+      },
+      {
+        year: 2000,
+        title: "Nasce Limewire",
+        desc: "Mentre Napster affronta problemi legali, Mark Gorton lancia Limewire basato sul protocollo Gnutella. Nessun server centrale.",
+        stat: "Lancio Software",
+        quote: "Decentralizzazione = Resilienza."
+      },
+      {
+        year: 2001,
+        title: "Chiusura di Napster",
+        desc: "Napster viene chiuso per ordine del tribunale. Gli utenti migrano in massa su Limewire, Kazaa e eDonkey.",
+        stat: "Migrazione di Massa",
+        quote: "A&M Records, Inc. v. Napster, Inc."
+      },
+      {
+        year: 2005,
+        title: "Caso Grokster",
+        desc: "La Corte Suprema USA stabilisce che i servizi P2P possono essere responsabili se 'inducono' alla violazione. Cattive notizie per Limewire.",
+        stat: "Sentenza Chiave",
+        quote: "Nasce la 'Inducement Rule'."
+      },
+      {
+        year: 2010,
+        title: "La Fine di Limewire",
+        desc: "Dopo 4 anni di battaglie legali, il giudice Kimba Wood emette un'ingiunzione permanente. Limewire deve disabilitare il software.",
+        stat: "Shutdown",
+        quote: "Arista Records LLC v. Lime Group LLC"
+      },
+      {
+        year: 2011,
+        title: "L'Era dello Streaming",
+        desc: "Spotify arriva negli USA. Il modello cambia da 'download illegale' a 'accesso legale illimitato'. La pirateria crolla drasticamente.",
+        stat: "Spotify US Launch",
+        quote: "Convenienza > Pirateria."
+      }
+    ];
+
+    const timelineNav = document.getElementById('timeline-nav');
+
+    function initTimeline() {
+      timelineData.forEach((item, index) => {
+        const btn = document.createElement('button');
+        btn.className = `timeline-node px-4 py-2 rounded-full border border-slate-300 text-sm font-semibold whitespace-nowrap bg-white hover:bg-slate-50 ${index === 0 ? 'active text-white bg-lime-600 border-lime-600' : 'text-slate-600'}`;
+        btn.textContent = item.year;
+        btn.onclick = () => setTimeline(index, btn);
+        timelineNav.appendChild(btn);
+      });
+
+      setTimeline(0, timelineNav.children[0]);
+    }
+
+    function setTimeline(index, btnElement) {
+      Array.from(timelineNav.children).forEach(btn => {
+        btn.className = 'timeline-node px-4 py-2 rounded-full border border-slate-300 text-sm font-semibold whitespace-nowrap bg-white hover:bg-slate-50 text-slate-600';
+      });
+      btnElement.className = 'timeline-node px-4 py-2 rounded-full border-lime-600 text-white bg-lime-600 text-sm font-semibold whitespace-nowrap shadow-md active';
+
+      const data = timelineData[index];
+      document.getElementById('year-display').textContent = data.year;
+      document.getElementById('stat-display').textContent = data.stat;
+      document.getElementById('event-title').textContent = data.title;
+      document.getElementById('event-desc').textContent = data.desc;
+      document.getElementById('event-quote').textContent = data.quote;
+    }
+
+
+
+    function initChart() {
+      const ctx = document.getElementById('revenueChart').getContext('2d');
+      const years = [1999, 2001, 2003, 2005, 2007, 2009, 2011, 2013];
+      const cdSales = [25, 23, 20, 17, 13, 9, 6, 5];
+      const streaming = [0, 0, 0.2, 0.5, 1, 2, 4, 7];
+
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: years,
+          datasets: [
+            {
+              label: 'Vendite Fisiche (CD/Vinili)',
+              data: cdSales,
+              borderColor: '#ef4444',
+              backgroundColor: 'rgba(239, 68, 68, 0.1)',
+              fill: true,
+              tension: 0.4
+            },
+            {
+              label: 'Streaming & Digitale',
+              data: streaming,
+              borderColor: '#84cc16',
+              backgroundColor: 'rgba(132, 204, 22, 0.1)',
+              fill: true,
+              tension: 0.4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'bottom',
+            },
+            tooltip: {
+              mode: 'index',
+              intersect: false,
+              callbacks: {
+                label: function(context) {
+                  return context.dataset.label + ': $' + context.parsed.y + ' Mld';
+                }
+              }
+            },
+            title: {
+              display: true,
+              text: 'Ricavi Industria Musicale (Miliardi $)',
+              font: {
+                size: 16
+              }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              grid: {
+                borderDash: [2, 4]
+              }
+            },
+            x: {
+              grid: {
+                display: false
+              }
+            }
+          }
+        }
+      });
+    }
+
+
+
+    function initNetworkSims() {
+      const napContainer = document.getElementById('napster-container');
+      napContainer.innerHTML = '';
+
+      const napSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      napSvg.setAttribute("class", "absolute top-0 left-0 w-full h-full pointer-events-none z-0 transition-opacity duration-500");
+      napSvg.id = "napster-lines";
+      napContainer.appendChild(napSvg);
+
+      const center = document.createElement('div');
+      center.className = 'absolute w-14 h-14 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold cursor-pointer hover:scale-110 transition-transform shadow-lg z-10';
+      center.style.left = '50%';
+      center.style.top = '50%';
+      center.style.transform = 'translate(-50%, -50%)';
+      center.textContent = 'SERVER';
+      center.id = 'napster-server';
+      center.onclick = killNapster;
+      napContainer.appendChild(center);
+
+      for (let i=0; i<8; i++) {
+        const angle = (i / 8) * Math.PI * 2;
+        const leftPct = 50 + Math.cos(angle) * 35;
+        const topPct = 50 + Math.sin(angle) * 35;
+
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", "50%");
+        line.setAttribute("y1", "50%");
+        line.setAttribute("x2", `${leftPct}%`);
+        line.setAttribute("y2", `${topPct}%`);
+        line.setAttribute("stroke", "#94a3b8");
+        line.setAttribute("stroke-width", "2");
+        napSvg.appendChild(line);
+
+        const peer = document.createElement('div');
+        peer.className = 'absolute w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center text-white text-[10px] napster-peer transition-opacity duration-500 z-10';
+        peer.style.left = `${leftPct}%`;
+        peer.style.top = `${topPct}%`;
+        peer.style.transform = 'translate(-50%, -50%)';
+        peer.textContent = 'User';
+        napContainer.appendChild(peer);
+      }
+
+      const gnuContainer = document.getElementById('gnutella-container');
+      gnuContainer.innerHTML = '';
+
+      const gnuSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      gnuSvg.setAttribute("class", "absolute top-0 left-0 w-full h-full pointer-events-none z-0");
+      gnuSvg.id = "gnutella-lines";
+      gnuContainer.appendChild(gnuSvg);
+
+      const positions = [
+        {t: 20, l: 20}, {t: 20, l: 50}, {t: 20, l: 80},
+        {t: 50, l: 20}, {t: 50, l: 50}, {t: 50, l: 80},
+        {t: 80, l: 20}, {t: 80, l: 50}, {t: 80, l: 80}
+      ];
+
+      positions.forEach((pos, idx) => {
+        const node = document.createElement('div');
+        node.className = 'absolute w-10 h-10 bg-lime-500 rounded-full flex items-center justify-center text-white text-xs font-bold cursor-pointer hover:bg-red-500 transition-colors shadow-sm gnutella-node z-10';
+        node.style.top = pos.t + '%';
+        node.style.left = pos.l + '%';
+        node.style.transform = 'translate(-50%, -50%)';
+        node.dataset.top = pos.t;
+        node.dataset.left = pos.l;
+        node.dataset.id = idx;
+        node.textContent = 'P' + (idx+1);
+
+        node.onclick = function() {
+          this.style.opacity = '0';
+          this.style.pointerEvents = 'none';
+          drawGnutellaLines();
+        };
+        gnuContainer.appendChild(node);
+      });
+
+      drawGnutellaLines();
+    }
+
+    function drawGnutellaLines() {
+      const svg = document.getElementById('gnutella-lines');
+      svg.innerHTML = '';
+
+      const nodes = Array.from(document.querySelectorAll('.gnutella-node'))
+                        .filter(n => n.style.opacity !== '0');
+
+      if (nodes.length < 2) return;
+
+      const drawn = new Set();
+
+      nodes.forEach(node => {
+        const x1 = parseFloat(node.dataset.left);
+        const y1 = parseFloat(node.dataset.top);
+        const id1 = node.dataset.id;
+
+        const distances = nodes.map(otherNode => {
+          if (node === otherNode) return { id: null, dist: Infinity };
+          const x2 = parseFloat(otherNode.dataset.left);
+          const y2 = parseFloat(otherNode.dataset.top);
+          const dist = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+          return { id: otherNode.dataset.id, x2, y2, dist };
+        }).filter(d => d.id !== null);
+
+        distances.sort((a, b) => a.dist - b.dist);
+        const connectionsToMake = Math.min(2, distances.length);
+
+        for(let i = 0; i < connectionsToMake; i++) {
+          const target = distances[i];
+
+          const pairKey = [id1, target.id].sort().join('-');
+          if (!drawn.has(pairKey)) {
+            drawn.add(pairKey);
+
+            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            line.setAttribute("x1", `${x1}%`);
+            line.setAttribute("y1", `${y1}%`);
+            line.setAttribute("x2", `${target.x2}%`);
+            line.setAttribute("y2", `${target.y2}%`);
+            line.setAttribute("stroke", "#84cc16");
+            line.setAttribute("stroke-width", "2");
+            line.setAttribute("stroke-dasharray", "4");
+            line.style.transition = "all 0.3s ease";
+            svg.appendChild(line);
+          }
+        }
+      });
+    }
+
+    function killNapster() {
+      const server = document.getElementById('napster-server');
+      server.textContent = 'OFF';
+      server.classList.remove('bg-red-500');
+      server.classList.add('bg-slate-800');
+
+      document.querySelectorAll('.napster-peer').forEach(p => p.style.opacity = '0.2');
+
+      const lines = document.getElementById('napster-lines');
+      if (lines) lines.style.opacity = '0.2';
+    }
+
+    function resetSim(type) {
+      if(type === 'central') {
+        const server = document.getElementById('napster-server');
+        server.textContent = 'SERVER';
+        server.classList.add('bg-red-500');
+        server.classList.remove('bg-slate-800');
+        document.querySelectorAll('.napster-peer').forEach(p => p.style.opacity = '1');
+
+        const lines = document.getElementById('napster-lines');
+        if (lines) lines.style.opacity = '1';
+      } else {
+        document.querySelectorAll('.gnutella-node').forEach(p => {
+          p.style.opacity = '1';
+          p.style.pointerEvents = 'auto';
+        });
+        drawGnutellaLines();
+      }
+    }
+
+    function showLegalTab(tabId) {
+      document.querySelectorAll('.legal-content').forEach(el => el.classList.add('hidden'));
+      document.getElementById(tabId).classList.remove('hidden');
+      document.querySelectorAll('.legal-tab').forEach(btn => {
+        btn.classList.remove('bg-slate-700', 'border-lime-500', 'text-lime-400');
+        btn.classList.add('text-slate-300', 'border-transparent');
+        if(btn.onclick.toString().includes(tabId)) {
+          btn.classList.add('bg-slate-700', 'border-lime-500', 'text-lime-400');
+          btn.classList.remove('text-slate-300', 'border-transparent');
+        }
+      });
+    }
+
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initTimeline();
+      initChart();
+      initNetworkSims();
+      showLegalTab('arg1');
+    });
+  </script>
+</body>
+</html>
